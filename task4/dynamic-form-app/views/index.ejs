@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; padding: 40px; background: #f0f2f5; }
+    .form-box { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .valid { border-color: green; }
+    .invalid { border-color: red; }
+    #feedback { font-size: 0.9em; color: red; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Register</h2>
+    <form id="userForm" action="/submit" method="POST">
+      <label>Username:</label><br>
+      <input type="text" name="username" id="username" required><br><br>
+
+      <label>Password:</label><br>
+      <input type="password" name="password" id="password" required><br>
+      <div id="feedback"></div><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
